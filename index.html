@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa del deporte | Tienda Oficial</title>
+  <link rel="icon" type="image/png" href="images/logo_casadeldeporte.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR PERMANENTE -->
+    <header class="navbar">
+        <div class="logo" id="logo-btn" style="cursor: pointer;">
+            <img src="images/logo_casadeldeporte.png" alt="Casa del deporte Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-inicio">Inicio</a></li>
+                <li><a href="#" id="nav-categorias">Categorías</a></li>
+                <li><a href="#" id="nav-about">Quiénes Somos</a></li>
+                <li><a href="https://wa.me/593985347156" target="_blank" class="nav-contacto">Contacto</a></li>
+                <li>
+                    <a href="#" class="nav-cart" id="open-cart-btn">
+                        Carrito <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         VISTA 1: INTERFAZ PRINCIPAL (HOME)
+         ========================================== -->
+    <main id="vista-principal">
+
+        <!-- BANNER HERO PRINCIPAL -->
+        <section class="hero">
+            <div class="slide active">
+                <video autoplay muted loop playsinline class="hero-video">
+                <source src="images/mancity.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+                </video>
+                <div class="overlay">
+                    <h1>TODO PARA EL DEPORTE</h1>
+                 <p>Equipamiento profesional para todas las disciplinas.</p>
+                    <a href="#" class="btn btn-explorar-todo">Comprar ahora</a>
+                </div>
+            </div>
+            <div class="slide">
+                <video autoplay muted loop playsinline class="hero-video">
+                <source src="images/barca.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+                </video>
+                <div class="overlay">
+                    <h1>CALIDAD Y RENDIMIENTO</h1>
+                    <p>Implementos deportivos para escuelas y clubes.</p>
+                    <a href="#" class="btn btn-explorar-todo">Ver catálogo</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/ronaldo.png" alt="Calidad y rendimiento">
+                <div class="overlay">
+                    <h1>ENTRENA COMO UN PROFESIONAL</h1>
+                    <p>Los mejores productos para mejorar tu desempeño.</p>
+                    <a href="#" class="btn btn-explorar-todo">Descubrir más</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="dots">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- SECCIÓN DE CATEGORÍAS PRINCIPALES -->
+        <section class="categorias" id="sec-categorias">
+            <h2>Categorías Destacadas</h2>
+
+            <div class="cards">
+
+                <!-- Tarjeta 1: Implementos -->
+                <div class="card" data-category-target="implementos">
+                    <div class="card-images">
+                        <img src="images/categories/s.png" alt="Implementos 1" class="active">
+                        <img src="images/categories/b.jpg" alt="Implementos 2">
+                        <img src="images/categories/tennis.png" alt="Implementos 3">
+                    </div>
+                    
+                    <div class="card-overlay">
+                        <span class="badge">Nuevo</span>
+                        <h3>Implementos Deportivos</h3>
+                        <p class="descripcion">Balones, conos, cronómetros y accesorios profesionales.</p>
+                        <p class="stock">✓ Disponible</p>
+                        <button class="btn-card btn-ver-mas">VER MÁS</button>
+                    </div>
+
+                    <div class="card-title">IMPLEMENTOS DEPORTIVOS</div>
+                </div>
+
+                <!-- Tarjeta 2: Uniformes -->
+                <div class="card" data-category-target="uniformes">
+                    <div class="card-images">
+                        <img src="images/categories/uniformes.jpg" alt="Uniformes 1" class="active">
+                        <img src="images/categories/halland.jpg" alt="Uniformes 2">
+                        <img src="images/categories/pessi.jpg" alt="Uniformes 3">
+                    </div>
+                    
+                    <div class="card-overlay">
+                        <span class="badge oferta">-20%</span>
+                        <h3>Uniformes Deportivos</h3>
+                        <p class="descripcion">Uniformes personalizados con tecnología transpirable.</p>
+                        <p class="stock">✓ Disponible</p>
+                        <button class="btn-card btn-ver-mas">VER MÁS</button>
+                    </div>
+
+                    <div class="card-title">UNIFORMES DEPORTIVOS</div>
+                </div>
+
+                <!-- Tarjeta 3: Redes -->
+                <div class="card" data-category-target="redes">
+                    <div class="card-images">
+                        <img src="images/categories/redes.jpg" alt="Redes 1" class="active">
+                        <img src="images/categories/voleibol.jpg" alt="Redes 2">
+                    </div>
+                    
+                    <div class="card-overlay">
+                        <span class="badge">TOP</span>
+                        <h3>Redes y Mallas</h3>
+                        <p class="descripcion">Redes de fútbol, voleibol y tenis con protección UV.</p>
+                        <p class="stock">✓ Disponible</p>
+                        <button class="btn-card btn-ver-mas">VER MÁS</button>
+                    </div>
+
+                    <div class="card-title">REDES Y MALLAS</div>
+                </div>
+
+                <!-- Tarjeta 4: Fitness -->
+                <div class="card" data-category-target="fitness">
+                    <div class="card-images">
+                        <img src="images/categories/gimnasio.jpg" alt="Gimnasio 1" class="active">
+                        <img src="images/categories/mancuernas.jpg" alt="Gimnasio 2">
+                    </div>
+                    
+                    <div class="card-overlay">
+                        <span class="badge fitness">Fitness</span>
+                        <h3>Gimnasio y Fitness</h3>
+                        <p class="descripcion">Mancuernas, pesas y accesorios para tu entrenamiento.</p>
+                        <p class="stock">✓ Disponible</p>
+                        <button class="btn-card btn-ver-mas">VER MÁS</button>
+                    </div>
+
+                    <div class="card-title">GIMNASIO Y FITNESS</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN NOSOTROS -->
+        <section class="about" id="sec-about">
+            <h2>Quiénes Somos</h2>
+            <p>
+                Somos especialistas en implementos deportivos,
+                uniformes, accesorios y equipamiento para clubes,
+                instituciones educativas y organizaciones deportivas.
+            </p>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         VISTA 2: INTERFAZ SECUNDARIA DE PRODUCTOS
+         ========================================== -->
+    <main id="vista-catalogo" class="hidden-view">
+        <section class="catalogo-section">
+            
+            <div class="catalogo-top-bar">
+                <button id="btn-volver" class="btn-back">&larr; Volver al Inicio</button>
+                
+                <!-- Pestañas de categorías integradas -->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="implementos">Implementos</button>
+                    <button class="filter-btn" data-category="uniformes">Uniformes</button>
+                    <button class="filter-btn" data-category="redes">Redes y Mallas</button>
+                    <button class="filter-btn" data-category="fitness">Gimnasio y Fitness</button>
+                </div>
+            </div>
+
+            <h2 id="catalogo-titulo-categoria" class="catalogo-main-title">Catálogo de Productos</h2>
+
+            <!-- Cuadrícula con productos -->
+            <div class="products-grid">
+                
+                <!-- IMPLEMENTOS -->
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/s.png" alt="Balón de Fútbol">
+                    <div class="product-info">
+                        <h4>Balón Oficial Trionda</h4>
+                        <p class="prod-desc">Laminado de alta durabilidad para césped sintético y natural.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$39.99</span>
+                            <button class="add-to-cart-sm" data-id="1" data-name="Balón Oficial Trionda" data-price="39.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/b.jpg" alt="Conos Entrenamientos">
+                    <div class="product-info">
+                        <h4>Set de Conos x12</h4>
+                        <p class="prod-desc">Conos flexibles de alta visibilidad para entrenamiento de fútbol.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$14.99</span>
+                            <button class="add-to-cart-sm" data-id="10" data-name="Set de Conos x12" data-price="14.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/cuerdasaltar.jpg" alt="Cuerda de Saltar">
+                    <div class="product-info">
+                        <h4>Cuerda de Saltar de Velocidad</h4>
+                        <p class="prod-desc">Cable ajustable de alta resistencia con rodamientos fluidos para entrenamiento cardiovascular.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$12.99</span>
+                            <button class="add-to-cart-sm" data-id="11" data-name="Cuerda de Saltar de Velocidad" data-price="12.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/tapetemujer.jpg" alt="Tapete Antideslizante">
+                    <div class="product-info">
+                        <h4>Tapete / Mat Antideslizante</h4>
+                        <p class="prod-desc">Superficie acolchada de alta densidad para yoga, pilates y ejercicios de suelo con máximo confort.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$19.99</span>
+                            <button class="add-to-cart-sm" data-id="12" data-name="Tapete Mat Antideslizante" data-price="19.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/cronometro.jpg" alt="Cronómetro Digital">
+                    <div class="product-info">
+                        <h4>Cronómetro Digital Deportivo</h4>
+                        <p class="prod-desc">Medición de precisión con pantalla LCD, resistencia al agua y funciones de tiempo parcial para entrenamiento.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$15.50</span>
+                            <button class="add-to-cart-sm" data-id="13" data-name="Cronómetro Digital Deportivo" data-price="15.50">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="implementos">
+                    <img src="images/categories/guanteadidaspre.jpg" alt="Guantes Adidas Predator">
+                    <div class="product-info">
+                        <h4>Guantes Adidas Predator Pro</h4>
+                        <p class="prod-desc">Palma de látex profesional con agarre superior y dorso flexible para máxima protección del arquero.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$48.00</span>
+                            <button class="add-to-cart-sm" data-id="14" data-name="Guantes Adidas Predator Pro" data-price="48.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNIFORMES -->
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/halland.jpg" alt="Camiseta Manchester City (2da Equipación)">
+                    <div class="product-info">
+                        <h4>Camiseta Manchester City (2da Equipación)</h4>
+                        <p class="prod-desc">Inspirado en la icónica abeja obrera de Manchester, celebra el esfuerzo, la unión y la resiliencia de la ciudad.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$29.99</span>
+                            <button class="add-to-cart-sm" data-id="5" data-name="Camiseta Manchester City (2da Equipación)" data-price="29.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/intermiami.jpg" alt="Camiseta Inter Miami">
+                    <div class="product-info">
+                        <h4>Camiseta Inter Miami</h4>
+                        <p class="prod-desc">Edición especial de colección con estampados oficiales.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$34.99</span>
+                            <button class="add-to-cart-sm" data-id="6" data-name="Camiseta Inter Miami" data-price="34.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/realmadrid.jpg" alt="Camiseta Real Madrid">
+                    <div class="product-info">
+                        <h4>Camiseta Real Madrid</h4>
+                        <p class="prod-desc">Diseño clásico con bordados de alta calidad y tecnología de ventilación.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$35.00</span>
+                            <button class="add-to-cart-sm" data-id="18" data-name="Camiseta Real Madrid" data-price="35.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/españa.jpg" alt="Camiseta España">
+                    <div class="product-info">
+                        <h4>Camiseta Selección España Titular</h4>
+                        <p class="prod-desc">El icónico rojo de La Roja en tejido transpirable de alto rendimiento.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$32.00</span>
+                            <button class="add-to-cart-sm" data-id="19" data-name="Camiseta Selección España Titular" data-price="32.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/españablanco.jpg" alt="Camiseta España Alternativa">
+                    <div class="product-info">
+                        <h4>Camiseta Selección España Alternativa</h4>
+                        <p class="prod-desc">Edición visitante en tono blanco con detalles elegantes y corte profesional.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$32.00</span>
+                            <button class="add-to-cart-sm" data-id="20" data-name="Camiseta España Alternativa" data-price="32.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/argentina.jpg" alt="Camiseta Argentina">
+                    <div class="product-info">
+                        <h4>Camiseta Selección Argentina</h4>
+                        <p class="prod-desc">Tradicionales franjas albicelestes con parches de alta definición.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$35.00</span>
+                            <button class="add-to-cart-sm" data-id="21" data-name="Camiseta Selección Argentina" data-price="35.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="uniformes">
+                    <img src="images/categories/brasilazul.jpg" alt="Camiseta Brasil Alternativa">
+                    <div class="product-info">
+                        <h4>Camiseta Selección Brasil Alternativa</h4>
+                        <p class="prod-desc">Diseño exclusivo en azul rey con texturas inspiradas en la naturaleza brasilera.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$32.00</span>
+                            <button class="add-to-cart-sm" data-id="22" data-name="Camiseta Brasil Alternativa" data-price="32.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REDES Y MALLAS -->
+                <div class="product-card" data-category="redes">
+                    <img src="images/categories/voleibol.jpg" alt="Red de Voleibol">
+                    <div class="product-info">
+                        <h4>Red de Voleibol Regulable</h4>
+                        <p class="prod-desc">Cables de acero reforzados y bordes de alta visibilidad.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$45.00</span>
+                            <button class="add-to-cart-sm" data-id="7" data-name="Red Voleibol Regulable" data-price="45.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="redes">
+                    <img src="images/categories/baloncesto.jpg" alt="Red para Aro de Baloncesto">
+                    <div class="product-info">
+                        <h4>Red Profesional para Aro de Baloncesto</h4>
+                        <p class="prod-desc">Malla reforzada de nailon antienredo para interiores y exteriores.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$12.00</span>
+                            <button class="add-to-cart-sm" data-id="23" data-name="Red Aro Baloncesto Pro" data-price="12.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="redes">
+                    <img src="images/categories/portabalones.jpg" alt="Malla Portabalones">
+                    <div class="product-info">
+                        <h4>Malla Portabalones Capacidad 10-12</h4>
+                        <p class="prod-desc">Red ultra resistente para transporte y almacenamiento seguro de balones de fútbol y básquet.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$18.50</span>
+                            <button class="add-to-cart-sm" data-id="24" data-name="Malla Portabalones" data-price="18.50">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="redes">
+                    <img src="images/categories/tenis.jpg" alt="Red de Tenis">
+                    <div class="product-info">
+                        <h4>Red Oficial de Tenis Profesional</h4>
+                        <p class="prod-desc">Malla de polietileno de alta densidad con cable superior de acero plastificado.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$75.00</span>
+                            <button class="add-to-cart-sm" data-id="25" data-name="Red Oficial de Tenis" data-price="75.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FITNESS -->
+                <div class="product-card" data-category="fitness">
+                    <img src="images/categories/mancuernas.jpg" alt="Mancuernas de Goma">
+                    <div class="product-info">
+                        <h4>Par de Mancuernas 10kg</h4>
+                        <p class="prod-desc">Recubiertas de goma anti-impacto con agarre ergonómico.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$49.99</span>
+                            <button class="add-to-cart-sm" data-id="8" data-name="Par Mancuernas 10kg" data-price="49.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fitness">
+                    <img src="images/categories/caminadora.jpg" alt="Caminadora Eléctrica">
+                    <div class="product-info">
+                        <h4>Caminadora Eléctrica Plegable</h4>
+                        <p class="prod-desc">Motor silencioso, múltiples niveles de inclinación y pantalla digital con monitor cardíaco.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$499.00</span>
+                            <button class="add-to-cart-sm" data-id="15" data-name="Caminadora Eléctrica Plegable" data-price="499.00">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fitness">
+                    <img src="images/categories/bancomir.jpg" alt="Banco Multiposición">
+                    <div class="product-info">
+                        <h4>Banco Multiejercicios Regulable</h4>
+                        <p class="prod-desc">Estructura de acero reforzado con ajuste multiposición para ejercicios de fuerza y mancuernas.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$129.99</span>
+                            <button class="add-to-cart-sm" data-id="16" data-name="Banco Multiejercicios Regulable" data-price="129.99">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fitness">
+                    <img src="images/categories/barracalis.jpg" alt="Barra para Calistenia">
+                    <div class="product-info">
+                        <h4>Barra Multifuncional de Calistenia</h4>
+                        <p class="prod-desc">Barra de dominadas y dominadas invertidas de alta resistencia con agarres antideslizantes de neopreno.</p>
+                        <div class="product-bottom">
+                            <span class="prod-price">$39.90</span>
+                            <button class="add-to-cart-sm" data-id="17" data-name="Barra Multifuncional Calistenia" data-price="39.90">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER PERMANENTE -->
+    <footer>
+        <h3>Casa del deporte</h3>
+        <p>&copy; 2026 Casa del deporte. Equipamiento Deportivo Profesional. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- INTERFAZ PANEL LATERAL DEL CARRITO -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="close-cart" id="close-cart-btn">&times;</button>
+        </div>
+
+        <div class="cart-body" id="cart-items-container">
+            <p class="empty-cart-msg">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-checkout" id="checkout-btn">Finalizar Compra vía WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
